@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="js/script.js"></script>
     <title>Random Quote Generator</title>
 </head>
 <body>
@@ -15,11 +14,17 @@
         <div class="container">
             <p id="quotation"></p>
             <p id="author"></p>
-            <button id="generate" onclick="generateQuote()">Generate</button>
+            <button id="generate">Generate</button>
        </div>
     </main>
     <footer>
+		<p>&copy; <span id="copyrightyear"></span> Brennan Walsh Productions</p>
+	</footer>
 
-    </footer>
+	<script>
+        const d = new Date();
+        document.getElementById('copyrightyear').innerHTML = d.getFullYear();
+    </script>
 </body>
 </html>
+<script src="js/scripts.js"></script>
